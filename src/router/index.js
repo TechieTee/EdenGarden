@@ -24,7 +24,7 @@ const routes = [
         component: SearchDogsByBreeds,
       },
       {
-        path: '/dog/:id',
+        path: '/dogs-by-breeds/:breeds?/random',
         name: 'dogDetails',
         component: DogDetails
       }

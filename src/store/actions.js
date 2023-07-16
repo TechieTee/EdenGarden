@@ -9,3 +9,13 @@ export function searchDogs({ commit }, keyword) {
     })
 
 }
+
+export function searchDogsDetails({ commit }, keyword) {
+    axiosClient.get(`breed/${keyword}/images/random`)
+      .then(({ data }) => { 
+    
+        commit('setSearchedDogs', data.message)
+        
+      })
+  
+  }
