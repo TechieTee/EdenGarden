@@ -1,30 +1,30 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
+
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+<div class="bg-grey h-full">
+  <header class="bg-white shadow-md h-16 flex justify-between items-stretch">
+    <router-link :to="{name: 'home'}" class="inline-flex items-center h-full px-5">
+      Home
+    </router-link>
+    <div class="flex items-center gap-1 ">
+    <router-link :to="{name: 'dogsByBreeds'}" class="inline-flex items-center transition-colors px-2 h-full hover:bg-green-100">
+     Search Dogs by Breeds
+    </router-link>
+   
   </div>
-  <HelloWorld msg="Vite + Vue" />
+    </header>
+    <main>
+    <router-view/>
+  </main>
+</div>
+
 </template>
 
+<script setup>
+
+
+</script>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>
