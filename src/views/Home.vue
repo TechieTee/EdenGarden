@@ -1,7 +1,6 @@
 <template>
 <div class="flex p-8 justify-center">
     <pre>{{ dogs }}</pre>
-<input type="text" class="rounded border-2 border-grey-200 w-full" placeholder="Search dogs by breeds...">
 <pre>{{ breeds }}</pre>
 </div>
   </template>
@@ -16,8 +15,8 @@ import axiosClient from '../axiosClient.js'
   const breeds = ref([])
   
   onMounted(async () => {
-   const response = await axiosClient.get('/random')
-   console.log(response.data)
+   const response = await axiosClient.get('breeds/list/all')
+   console.log("response", response.data)
    breeds.value = response.data
   })
   </script>
