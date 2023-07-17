@@ -4,7 +4,11 @@
   
   <div class="p-8 pb-0 text-green-500">
    <img :src="breeds.message" alt="dogs-gallery" class="rounded-t-xl w-90 h-50 object-cover"/>
-   <pre>Image Url:</pre><span>{{ breeds.message }}</span>
+   <a :href="breeds.message"
+    target="_blank"
+    class="px-5 py-3 rounded text-white bg-green-500 hover:bg-green-600 transition-colors"
+ 
+   >View Image</a>
   </div>
  
 </template>

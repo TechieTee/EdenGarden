@@ -9,9 +9,15 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-10">
     <div v-for="dog of dogs" :key="dogs" class="bg-white shadow rounded-xl">
      <img :src="dogs[0]" alt="" class="rounded-t-xl w-full h-50 object-cover"/>
-<div class="p-4"><router-link :to="{name: 'dogDetails'}">
+<div class="p-4">
+    <a :href="dogs[0]"
+    target="_blank">
 {{keyword}} dog details
-</router-link></div>
+</a></div>
+<!-- <a :href="breeds.message"
+    target="_blank"
+   
+   >View Image</a> -->
     </div>
     </div>
 </template>
