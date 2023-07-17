@@ -19,6 +19,7 @@ import axiosClient from '../axiosClient.js'
   const breeds = ref([])
   
   onMounted(async () => {
+    // The commented Api should display a list of at least 100 dog images by default when they load the application. But this data is inconsistent.
   //  const response = await axiosClient.get('breeds/list/all')
   const response = await axiosClient.get('breeds/image/random')
    console.log("response", response.data)
