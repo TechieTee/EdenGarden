@@ -10,9 +10,9 @@
     <div v-for="(dog, dogs) in dogs" :key="dogs" class="bg-white shadow rounded-xl">
   <img :src="dog" alt="" class="rounded-t-xl w-full h-50 object-cover"/>
 <div class="p-4">
-    <a :href="dogs[0]"
+    <a :href="dog"
     target="_blank">
-{{keyword}} dog details
+{{keyword}} {{dogs}} dog details
 </a></div>
 <!-- <a :href="breeds.message"
     target="_blank"
